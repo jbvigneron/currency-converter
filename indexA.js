@@ -1,9 +1,10 @@
-function convert() {
+// Solution A
+function checkAndConvert() {
     var errorField = document.getElementById('error');
     errorField.style.display = "none";
     errorField.innerText = '';
 
-    var initialAmount = document.getElementById('initialAmount').value;    
+    var initialAmount = document.getElementById('initialAmount').value;
 
     if (initialAmount === "") {
         errorField.style.display = "block";

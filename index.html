@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Conversions de devises</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Conversions de devises</h1>
+        <form class="form-inline">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-group" for="initialAmount">Convertir ce montant :</label>
+                        <input class="form-control" type="number" id="initialAmount" name="initialAmount" />
+                    </div>
+
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="conversion" id="toEUR" value="FRF"> EUR en FRF
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="conversion" id="toFRF" value="EUR"> FRF en EUR
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input onclick="convert()" type="button" class="btn btn-primary" value="Convertir" />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" readonly type="text" id="convertedAmount" name="convertedAmount" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="error" class="text-danger" style="display:none"></div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
